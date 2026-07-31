@@ -1,0 +1,204 @@
+:root {
+  --bg-color: #e8f5e9;
+  --main-green: #00e676;
+  --dark-green: #0b3c26;
+  --cyber-pink: #ff007f;
+  --y2k-yellow: #ccff00;
+  --card-bg: #ffffff;
+  --border-style: 3px solid #000000;
+  --shadow-y2k: 5px 5px 0px #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--dark-green);
+  padding: 20px;
+}
+
+/* Header Estilo Anos 2000 */
+.hero {
+  text-align: center;
+  background: linear-gradient(135deg, var(--main-green), var(--y2k-yellow));
+  border: var(--border-style);
+  box-shadow: var(--shadow-y2k);
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--cyber-pink);
+  color: #fff;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+  border: 2px solid #000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'VT323', monospace;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #fff;
+}
+
+.subtitle {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* Layout Cards */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: var(--border-style);
+  box-shadow: var(--shadow-y2k);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.card-header {
+  font-family: 'VT323', monospace;
+  background: var(--y2k-yellow);
+  display: inline-block;
+  padding: 2px 8px;
+  border: 2px solid #000;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Quiz Style Y2K */
+.quiz-wrapper {
+  background: var(--card-bg);
+  border: var(--border-style);
+  box-shadow: var(--shadow-y2k);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.quiz-header h2 {
+  font-family: 'VT323', monospace;
+  font-size: 2.2rem;
+  color: var(--cyber-pink);
+  margin-bottom: 5px;
+}
+
+.quiz-header p {
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+#question {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 600px) {
+  .btn-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.btn {
+  background: #f0f0f0;
+  border: var(--border-style);
+  padding: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #000;
+  transition: all 0.1s ease;
+}
+
+.btn:hover {
+  background: var(--y2k-yellow);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000;
+}
+
+.btn.correct {
+  background-color: var(--main-green) !important;
+}
+
+.btn.wrong {
+  background-color: var(--cyber-pink) !important;
+  color: white;
+}
+
+.action-btn {
+  margin-top: 20px;
+  background: var(--cyber-pink);
+  color: white;
+  border: var(--border-style);
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-family: 'VT323', monospace;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #000;
+}
+
+.action-btn:hover {
+  background: var(--main-green);
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+}
